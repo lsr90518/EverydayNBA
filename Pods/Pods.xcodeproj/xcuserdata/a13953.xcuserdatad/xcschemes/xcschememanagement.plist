@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-EverydayNBA-AUMediaPlayer-AUMediaPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EverydayNBA-AUMediaPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-EverydayNBA-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>981FFB4ADD3AEC41844B88CA</key>
+		<key>1A7FEFD421F4A2482BE6268C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C92A18BC304A427150193C9B</key>
+		<key>6AC500C79CE7A9CAEB411ECF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E236AAD87C6E92E4A2CF5F3F</key>
+		<key>6C3B91E04B9863DED433B632</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5ED918B86728E3EFB72B54C</key>
+		<key>6F9A86759563462B1CB1D853</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1FA85B97EC341F203C33517</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0056095B43575003D84E766</key>
 		<dict>
 			<key>primary</key>
 			<true/>

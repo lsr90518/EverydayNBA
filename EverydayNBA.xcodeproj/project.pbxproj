@@ -14,6 +14,14 @@
 		831B930A1B2AAD6B00C47894 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831B93091B2AAD6B00C47894 /* Images.xcassets */; };
 		831B930D1B2AAD6B00C47894 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831B930B1B2AAD6B00C47894 /* LaunchScreen.xib */; };
 		831B93191B2AAD6B00C47894 /* EverydayNBATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B93181B2AAD6B00C47894 /* EverydayNBATests.m */; };
+		831B93241B2AB4B300C47894 /* ENTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B93231B2AB4B300C47894 /* ENTableViewCell.m */; };
+		831B93271B2AB63100C47894 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93261B2AB63100C47894 /* backgroundImage.png */; };
+		831B93291B2ABAAA00C47894 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B93281B2ABAAA00C47894 /* AVFoundation.framework */; };
+		831B932C1B2ABBC700C47894 /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B932B1B2ABBC700C47894 /* VideoView.m */; };
+		831B932F1B2ABD7C00C47894 /* MediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B932E1B2ABD7C00C47894 /* MediaItem.m */; };
+		831B93321B2AC80A00C47894 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93311B2AC80A00C47894 /* basketball.png */; };
+		831B93341B2AC9E200C47894 /* basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93331B2AC9E200C47894 /* basket.png */; };
+		831B93361B2AD95C00C47894 /* fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93351B2AD95C00C47894 /* fullscreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,17 @@
 		831B93121B2AAD6B00C47894 /* EverydayNBATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverydayNBATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B93171B2AAD6B00C47894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831B93181B2AAD6B00C47894 /* EverydayNBATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverydayNBATests.m; sourceTree = "<group>"; };
+		831B93221B2AB4B300C47894 /* ENTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENTableViewCell.h; sourceTree = "<group>"; };
+		831B93231B2AB4B300C47894 /* ENTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENTableViewCell.m; sourceTree = "<group>"; };
+		831B93261B2AB63100C47894 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
+		831B93281B2ABAAA00C47894 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		831B932A1B2ABBC700C47894 /* VideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
+		831B932B1B2ABBC700C47894 /* VideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoView.m; sourceTree = "<group>"; };
+		831B932D1B2ABD7C00C47894 /* MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItem.h; sourceTree = "<group>"; };
+		831B932E1B2ABD7C00C47894 /* MediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaItem.m; sourceTree = "<group>"; };
+		831B93311B2AC80A00C47894 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		831B93331B2AC9E200C47894 /* basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basket.png; sourceTree = "<group>"; };
+		831B93351B2AD95C00C47894 /* fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullscreen.png; sourceTree = "<group>"; };
 		D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.release.xcconfig"; sourceTree = "<group>"; };
 		DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831B93291B2ABAAA00C47894 /* AVFoundation.framework in Frameworks */,
 				1DB6C117E761360F0BE37252 /* libPods-EverydayNBA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +95,7 @@
 		40BFFB26E3C00F7ADE7A7971 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831B93281B2ABAAA00C47894 /* AVFoundation.framework */,
 				01E8453273F7804BC35712D7 /* libPods-EverydayNBA.a */,
 			);
 			name = Frameworks;
@@ -103,10 +124,16 @@
 		831B92FB1B2AAD6B00C47894 /* EverydayNBA */ = {
 			isa = PBXGroup;
 			children = (
+				831B93301B2AC12500C47894 /* Model */,
+				831B93251B2AB61A00C47894 /* Resources */,
 				831B93001B2AAD6B00C47894 /* AppDelegate.h */,
 				831B93011B2AAD6B00C47894 /* AppDelegate.m */,
 				831B93031B2AAD6B00C47894 /* ViewController.h */,
 				831B93041B2AAD6B00C47894 /* ViewController.m */,
+				831B93221B2AB4B300C47894 /* ENTableViewCell.h */,
+				831B93231B2AB4B300C47894 /* ENTableViewCell.m */,
+				831B932A1B2ABBC700C47894 /* VideoView.h */,
+				831B932B1B2ABBC700C47894 /* VideoView.m */,
 				831B93091B2AAD6B00C47894 /* Images.xcassets */,
 				831B930B1B2AAD6B00C47894 /* LaunchScreen.xib */,
 				831B92FC1B2AAD6B00C47894 /* Supporting Files */,
@@ -138,6 +165,26 @@
 				831B93171B2AAD6B00C47894 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		831B93251B2AB61A00C47894 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				831B93351B2AD95C00C47894 /* fullscreen.png */,
+				831B93331B2AC9E200C47894 /* basket.png */,
+				831B93311B2AC80A00C47894 /* basketball.png */,
+				831B93261B2AB63100C47894 /* backgroundImage.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		831B93301B2AC12500C47894 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831B932D1B2ABD7C00C47894 /* MediaItem.h */,
+				831B932E1B2ABD7C00C47894 /* MediaItem.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831B93271B2AB63100C47894 /* backgroundImage.png in Resources */,
 				831B930D1B2AAD6B00C47894 /* LaunchScreen.xib in Resources */,
+				831B93361B2AD95C00C47894 /* fullscreen.png in Resources */,
+				831B93321B2AC80A00C47894 /* basketball.png in Resources */,
+				831B93341B2AC9E200C47894 /* basket.png in Resources */,
 				831B930A1B2AAD6B00C47894 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				831B93051B2AAD6B00C47894 /* ViewController.m in Sources */,
+				831B932C1B2ABBC700C47894 /* VideoView.m in Sources */,
 				831B93021B2AAD6B00C47894 /* AppDelegate.m in Sources */,
+				831B93241B2AB4B300C47894 /* ENTableViewCell.m in Sources */,
 				831B92FF1B2AAD6B00C47894 /* main.m in Sources */,
+				831B932F1B2ABD7C00C47894 /* MediaItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

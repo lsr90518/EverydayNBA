@@ -20,6 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AUMediaPlayer (2.0.0):
+    - AFNetworking (~> 2.3)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -27,11 +29,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AUMediaPlayer
   - SDWebImage
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AUMediaPlayer: a55f87fc3112a1bfb06ec67db7364b8ff10f5ed7
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 

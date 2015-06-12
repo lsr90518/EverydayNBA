@@ -5,6 +5,7 @@ target 'EverydayNBA' do
   pod 'AFNetworking'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
+  pod "AUMediaPlayer"
 end
 
 target 'EverydayNBATests' do
