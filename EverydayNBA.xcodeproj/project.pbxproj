@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB6C117E761360F0BE37252 /* libPods-EverydayNBA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8453273F7804BC35712D7 /* libPods-EverydayNBA.a */; };
 		831B92FF1B2AAD6B00C47894 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B92FE1B2AAD6B00C47894 /* main.m */; };
 		831B93021B2AAD6B00C47894 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B93011B2AAD6B00C47894 /* AppDelegate.m */; };
 		831B93051B2AAD6B00C47894 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B93041B2AAD6B00C47894 /* ViewController.m */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01E8453273F7804BC35712D7 /* libPods-EverydayNBA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EverydayNBA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B92F91B2AAD6B00C47894 /* EverydayNBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverydayNBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B92FD1B2AAD6B00C47894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831B92FE1B2AAD6B00C47894 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		831B93121B2AAD6B00C47894 /* EverydayNBATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverydayNBATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B93171B2AAD6B00C47894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831B93181B2AAD6B00C47894 /* EverydayNBATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverydayNBATests.m; sourceTree = "<group>"; };
+		D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.release.xcconfig"; sourceTree = "<group>"; };
+		DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB6C117E761360F0BE37252 /* libPods-EverydayNBA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DAF95206BB5D470A374B69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */,
+				D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		40BFFB26E3C00F7ADE7A7971 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01E8453273F7804BC35712D7 /* libPods-EverydayNBA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		831B92F01B2AAD6B00C47894 = {
 			isa = PBXGroup;
 			children = (
 				831B92FB1B2AAD6B00C47894 /* EverydayNBA */,
 				831B93151B2AAD6B00C47894 /* EverydayNBATests */,
 				831B92FA1B2AAD6B00C47894 /* Products */,
+				21DAF95206BB5D470A374B69 /* Pods */,
+				40BFFB26E3C00F7ADE7A7971 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 831B931C1B2AAD6B00C47894 /* Build configuration list for PBXNativeTarget "EverydayNBA" */;
 			buildPhases = (
+				6AA6F85A5AF29F11C8634F9D /* Check Pods Manifest.lock */,
 				831B92F51B2AAD6B00C47894 /* Sources */,
 				831B92F61B2AAD6B00C47894 /* Frameworks */,
 				831B92F71B2AAD6B00C47894 /* Resources */,
+				C71255D18A7CD7B2E5746BAD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +236,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AA6F85A5AF29F11C8634F9D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C71255D18A7CD7B2E5746BAD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		831B92F51B2AAD6B00C47894 /* Sources */ = {
@@ -334,6 +393,7 @@
 		};
 		831B931D1B2AAD6B00C47894 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -345,6 +405,7 @@
 		};
 		831B931E1B2AAD6B00C47894 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -407,6 +468,7 @@
 				831B931E1B2AAD6B00C47894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		831B931F1B2AAD6B00C47894 /* Build configuration list for PBXNativeTarget "EverydayNBATests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +477,7 @@
 				831B93211B2AAD6B00C47894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
