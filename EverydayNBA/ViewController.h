@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
+{
+    UIWebView *_webView;
+    NSString *urlString;
+    NSURLRequest *request;
+}
 
 
 @end

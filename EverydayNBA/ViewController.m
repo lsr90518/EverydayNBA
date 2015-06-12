@@ -11,6 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "VideoView.h"
 #import "MediaItem.h"
+#import "NBAVideoParser.h"
+#import <SVProgressHUD.h>
 #import "ENTableViewCell.h"
 
 @interface ViewController (){
@@ -53,60 +55,70 @@
     
     //test data
     videoList = [[NSMutableArray alloc]init];
-    VideoItem *video = [[VideoItem alloc] init];
-    video.author = @"Video author";
-    video.title = @"現地11日のベストスティール／マシュー・デラベドバ ";
-    video.uid = @"00000000004";
-    video.thumnail = @"http://www.nba.co.jp/javaImages/66/61/0,,~13787494,00.jpeg?&w=400&h=222";
-    video.remotePath = @"http://qn.vc/files/data/1541/2%20Many%20Girls%20-%20Fazilpuria,%20Badshah%20[mobmp4.com].mp4";
-    
-    VideoItem *video2 = [[VideoItem alloc] init];
-    video2.author = @"Video author";
-    video2.title = @"現地11日  M・デラベドバからL・ジェイムズのアリウープ ";
-    video2.uid = @"00000000004";
-    video2.thumnail = @"http://www.nba.co.jp/javaImages/66/61/0,,~13787494,00.jpeg?&w=400&h=222";
-    video2.remotePath = @"http://qn.vc/files/data/1541/2%20Many%20Girls%20-%20Fazilpuria,%20Badshah%20[mobmp4.com].mp4";
-    
-    VideoItem *video3 = [[VideoItem alloc] init];
-    video3.author = @"Video author";
-    video3.title = @"現地11日のベストブロック／ジェイムズ・ジョーンズ ";
-    video3.uid = @"00000000004";
-    video3.thumnail = @"http://www.nba.co.jp/javaImages/66/61/0,,~13787494,00.jpeg?&w=400&h=222";
-    video3.remotePath = @"http://www.tonycuffe.com/mp3/pipers%20hut.mp3";
-    
-    VideoItem *video4 = [[VideoItem alloc] init];
-    video4.author = @"Video author";
-    video4.title = @"現地11日 トップ5プレー ";
-    video4.uid = @"00000000004";
-    video4.thumnail = @"http://www.nba.co.jp/javaImages/66/61/0,,~13787494,00.jpeg?&w=400&h=222";
-    video4.remotePath = @"http://qn.vc/files/data/1541/2%20Many%20Girls%20-%20Fazilpuria,%20Badshah%20[mobmp4.com].mp4";
-    [videoList addObject:video];
-    [videoList addObject:video2];
-    [videoList addObject:video3];
-    [videoList addObject:video4];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _webView = [[UIWebView alloc]initWithFrame:CGRectZero];
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
+    urlString = @"http://www.nba.co.jp/nba/video";
+    request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [_webView loadRequest:request];
 }
 
 -(void) viewDidAppear:(BOOL)animated{
-    AUMediaPlayer *player = [AUMediaPlayer sharedInstance];
-    NSError *error;
+    //parse data
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
+}
+
+-(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    NSLog(@"%@", error);
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
     
-    topItem = [[VideoItem alloc]init];
-    topItem.author = @"";
-    topItem.title = @"Video";
-    topItem.uid = @"00000000001";
-    topItem.remotePath = @"http://vod.nbajapan.aka.oss1.performgroup.com/20150612/rwoh0gnnuz7q17989s012dks0.mp4";
+    [videoList removeAllObjects];
     
-    [player playItem: topItem error:&error];
-    [self setPlayerLayer];
-    [player play];
+    NSString *body = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
+    NSDictionary *dic = [NBAVideoParser topSiteDataDictionaryWithHTMLSource:body];
+    NSString *tempString = [NBAVideoParser videoSourceWithHTMLSource:body];
     
-//    [self updateDownloadProgress];
-//    [self setFullscreen];
+    if (dic[@"OtherArray"]!=nil) {
+        
+//        AUMediaPlayer *player = [AUMediaPlayer sharedInstance];
+//        NSError *error;
+        
+        topItem = [[VideoItem alloc]init];
+        topItem.author = @"";
+        topItem.title = dic[@"TopDictionary"][@"Title"];
+        topItem.uid = dic[@"TopDictionary"][@"ThumbnailURL"];
+
+        NSArray *itemArray = [[NSArray alloc]initWithArray:dic[@"OtherArray"]];
+        for (NSDictionary *n in itemArray){
+            VideoItem *item = [[VideoItem alloc]init];
+            item.uid = n[@"ClipId"];
+            item.thumnail = n[@"ThumbnailURL"];
+            item.title = n[@"Title"];
+            [videoList addObject:item];
+        }
+        
+        [videoTable reloadData];
+    }
+    
+    
+    if (![tempString isEqualToString:@""]) {
+        AUMediaPlayer *player = [AUMediaPlayer sharedInstance];
+        NSError *error;
+        topItem.remotePath = tempString;
+        [player playItem: topItem error:&error];
+        [self setPlayerLayer];
+        [player play];
+    }
+    
+    [SVProgressHUD dismiss];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -175,11 +187,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AUMediaPlayer *player = [AUMediaPlayer sharedInstance];
-    NSError *error;
     
-    [player playItem:[videoList objectAtIndex:indexPath.row] error:&error];
-    [player play];
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeGradient];
+    
+    if (indexPath.row==0) {
+        AUMediaPlayer *player = [AUMediaPlayer sharedInstance];
+        NSError *error;
+        //
+        
+        [player playItem:topItem error:&error];
+        [player play];
+    }
+    else{
+        VideoItem *item = [videoList objectAtIndex:indexPath.row];
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:item.uid]];
+        [_webView loadRequest:request];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(ENTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

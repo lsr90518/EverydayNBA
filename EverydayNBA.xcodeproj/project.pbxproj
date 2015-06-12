@@ -22,6 +22,7 @@
 		831B93321B2AC80A00C47894 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93311B2AC80A00C47894 /* basketball.png */; };
 		831B93341B2AC9E200C47894 /* basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93331B2AC9E200C47894 /* basket.png */; };
 		831B93361B2AD95C00C47894 /* fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 831B93351B2AD95C00C47894 /* fullscreen.png */; };
+		831B933A1B2ADD5500C47894 /* NBAVideoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B93391B2ADD5500C47894 /* NBAVideoParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		831B93311B2AC80A00C47894 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
 		831B93331B2AC9E200C47894 /* basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basket.png; sourceTree = "<group>"; };
 		831B93351B2AD95C00C47894 /* fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullscreen.png; sourceTree = "<group>"; };
+		831B93381B2ADD5500C47894 /* NBAVideoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBAVideoParser.h; sourceTree = "<group>"; };
+		831B93391B2ADD5500C47894 /* NBAVideoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBAVideoParser.m; sourceTree = "<group>"; };
 		D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.release.xcconfig"; sourceTree = "<group>"; };
 		DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +127,7 @@
 		831B92FB1B2AAD6B00C47894 /* EverydayNBA */ = {
 			isa = PBXGroup;
 			children = (
+				831B93371B2ADD3700C47894 /* Parser */,
 				831B93301B2AC12500C47894 /* Model */,
 				831B93251B2AB61A00C47894 /* Resources */,
 				831B93001B2AAD6B00C47894 /* AppDelegate.h */,
@@ -185,6 +189,15 @@
 				831B932E1B2ABD7C00C47894 /* MediaItem.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		831B93371B2ADD3700C47894 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				831B93381B2ADD5500C47894 /* NBAVideoParser.h */,
+				831B93391B2ADD5500C47894 /* NBAVideoParser.m */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +343,7 @@
 				831B932C1B2ABBC700C47894 /* VideoView.m in Sources */,
 				831B93021B2AAD6B00C47894 /* AppDelegate.m in Sources */,
 				831B93241B2AB4B300C47894 /* ENTableViewCell.m in Sources */,
+				831B933A1B2ADD5500C47894 /* NBAVideoParser.m in Sources */,
 				831B92FF1B2AAD6B00C47894 /* main.m in Sources */,
 				831B932F1B2ABD7C00C47894 /* MediaItem.m in Sources */,
 			);
