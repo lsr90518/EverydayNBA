@@ -35,6 +35,22 @@
 		83D1DAA41B2FB79E009B3D7F /* icon@1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DA9A1B2FB79E009B3D7F /* icon@1024.png */; };
 		83D1DAA51B2FB79E009B3D7F /* icon@152.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DA9B1B2FB79E009B3D7F /* icon@152.png */; };
 		83D1DAA61B2FB79E009B3D7F /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DA9C1B2FB79E009B3D7F /* icon@3x.png */; };
+		83D1DAA81B2FF322009B3D7F /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAA71B2FF322009B3D7F /* Icon-Small@3x.png */; };
+		83D1DAAF1B2FFDC4009B3D7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAAA1B2FFDC4009B3D7F /* Default-568h@2x.png */; };
+		83D1DAB01B2FFDC4009B3D7F /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAAB1B2FFDC4009B3D7F /* Default-667h@2x.png */; };
+		83D1DAB11B2FFDC4009B3D7F /* Default-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAAC1B2FFDC4009B3D7F /* Default-Portrait-736h@3x.png */; };
+		83D1DAB21B2FFDC4009B3D7F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAAD1B2FFDC4009B3D7F /* Default.png */; };
+		83D1DAB31B2FFDC4009B3D7F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D1DAAE1B2FFDC4009B3D7F /* Default@2x.png */; };
+		9F1DC7AE1B2FE2B200E6A71E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7A51B2FE2B200E6A71E /* AdSupport.framework */; };
+		9F1DC7AF1B2FE2B200E6A71E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7A61B2FE2B200E6A71E /* AudioToolbox.framework */; };
+		9F1DC7B01B2FE2B200E6A71E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7A71B2FE2B200E6A71E /* CoreGraphics.framework */; };
+		9F1DC7B11B2FE2B200E6A71E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7A81B2FE2B200E6A71E /* CoreTelephony.framework */; };
+		9F1DC7B21B2FE2B200E6A71E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7A91B2FE2B200E6A71E /* EventKit.framework */; };
+		9F1DC7B31B2FE2B200E6A71E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7AA1B2FE2B200E6A71E /* EventKitUI.framework */; };
+		9F1DC7B41B2FE2B200E6A71E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7AB1B2FE2B200E6A71E /* MessageUI.framework */; };
+		9F1DC7B51B2FE2B200E6A71E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7AC1B2FE2B200E6A71E /* StoreKit.framework */; };
+		9F1DC7B61B2FE2B200E6A71E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7AD1B2FE2B200E6A71E /* SystemConfiguration.framework */; };
+		9F1DC7B81B2FE5D000E6A71E /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1DC7B71B2FE5D000E6A71E /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +102,22 @@
 		83D1DA9A1B2FB79E009B3D7F /* icon@1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@1024.png"; sourceTree = "<group>"; };
 		83D1DA9B1B2FB79E009B3D7F /* icon@152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@152.png"; sourceTree = "<group>"; };
 		83D1DA9C1B2FB79E009B3D7F /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		83D1DAA71B2FF322009B3D7F /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		83D1DAAA1B2FFDC4009B3D7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83D1DAAB1B2FFDC4009B3D7F /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		83D1DAAC1B2FFDC4009B3D7F /* Default-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		83D1DAAD1B2FFDC4009B3D7F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83D1DAAE1B2FFDC4009B3D7F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9F1DC7A51B2FE2B200E6A71E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9F1DC7A61B2FE2B200E6A71E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9F1DC7A71B2FE2B200E6A71E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F1DC7A81B2FE2B200E6A71E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9F1DC7A91B2FE2B200E6A71E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		9F1DC7AA1B2FE2B200E6A71E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		9F1DC7AB1B2FE2B200E6A71E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F1DC7AC1B2FE2B200E6A71E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9F1DC7AD1B2FE2B200E6A71E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9F1DC7B71B2FE5D000E6A71E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.release.xcconfig"; sourceTree = "<group>"; };
 		DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayNBA/Pods-EverydayNBA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +127,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1DC7B81B2FE5D000E6A71E /* GoogleMobileAds.framework in Frameworks */,
+				9F1DC7AE1B2FE2B200E6A71E /* AdSupport.framework in Frameworks */,
+				9F1DC7AF1B2FE2B200E6A71E /* AudioToolbox.framework in Frameworks */,
+				9F1DC7B01B2FE2B200E6A71E /* CoreGraphics.framework in Frameworks */,
+				9F1DC7B11B2FE2B200E6A71E /* CoreTelephony.framework in Frameworks */,
+				9F1DC7B21B2FE2B200E6A71E /* EventKit.framework in Frameworks */,
+				9F1DC7B31B2FE2B200E6A71E /* EventKitUI.framework in Frameworks */,
+				9F1DC7B41B2FE2B200E6A71E /* MessageUI.framework in Frameworks */,
+				9F1DC7B51B2FE2B200E6A71E /* StoreKit.framework in Frameworks */,
+				9F1DC7B61B2FE2B200E6A71E /* SystemConfiguration.framework in Frameworks */,
 				831B93291B2ABAAA00C47894 /* AVFoundation.framework in Frameworks */,
 				1DB6C117E761360F0BE37252 /* libPods-EverydayNBA.a in Frameworks */,
 			);
@@ -122,6 +164,16 @@
 		40BFFB26E3C00F7ADE7A7971 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F1DC7B71B2FE5D000E6A71E /* GoogleMobileAds.framework */,
+				9F1DC7A51B2FE2B200E6A71E /* AdSupport.framework */,
+				9F1DC7A61B2FE2B200E6A71E /* AudioToolbox.framework */,
+				9F1DC7A71B2FE2B200E6A71E /* CoreGraphics.framework */,
+				9F1DC7A81B2FE2B200E6A71E /* CoreTelephony.framework */,
+				9F1DC7A91B2FE2B200E6A71E /* EventKit.framework */,
+				9F1DC7AA1B2FE2B200E6A71E /* EventKitUI.framework */,
+				9F1DC7AB1B2FE2B200E6A71E /* MessageUI.framework */,
+				9F1DC7AC1B2FE2B200E6A71E /* StoreKit.framework */,
+				9F1DC7AD1B2FE2B200E6A71E /* SystemConfiguration.framework */,
 				831B93281B2ABAAA00C47894 /* AVFoundation.framework */,
 				01E8453273F7804BC35712D7 /* libPods-EverydayNBA.a */,
 			);
@@ -198,6 +250,7 @@
 		831B93251B2AB61A00C47894 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83D1DAA91B2FFDC4009B3D7F /* launchImages */,
 				83D1DA921B2FB79E009B3D7F /* icon */,
 				831B933F1B2EBEF100C47894 /* pause.png */,
 				831B933D1B2EABDA00C47894 /* play.png */,
@@ -230,6 +283,7 @@
 		83D1DA921B2FB79E009B3D7F /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				83D1DAA71B2FF322009B3D7F /* Icon-Small@3x.png */,
 				83D1DA931B2FB79E009B3D7F /* Icon-60.png */,
 				83D1DA941B2FB79E009B3D7F /* Icon-60@2x.png */,
 				83D1DA951B2FB79E009B3D7F /* Icon-Small-40.png */,
@@ -242,6 +296,18 @@
 				83D1DA9C1B2FB79E009B3D7F /* icon@3x.png */,
 			);
 			path = icon;
+			sourceTree = "<group>";
+		};
+		83D1DAA91B2FFDC4009B3D7F /* launchImages */ = {
+			isa = PBXGroup;
+			children = (
+				83D1DAAA1B2FFDC4009B3D7F /* Default-568h@2x.png */,
+				83D1DAAB1B2FFDC4009B3D7F /* Default-667h@2x.png */,
+				83D1DAAC1B2FFDC4009B3D7F /* Default-Portrait-736h@3x.png */,
+				83D1DAAD1B2FFDC4009B3D7F /* Default.png */,
+				83D1DAAE1B2FFDC4009B3D7F /* Default@2x.png */,
+			);
+			path = launchImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +393,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D1DAB31B2FFDC4009B3D7F /* Default@2x.png in Resources */,
 				83D1DAA41B2FB79E009B3D7F /* icon@1024.png in Resources */,
 				831B933E1B2EABDA00C47894 /* play.png in Resources */,
+				83D1DAA81B2FF322009B3D7F /* Icon-Small@3x.png in Resources */,
 				83D1DAA61B2FB79E009B3D7F /* icon@3x.png in Resources */,
 				83D1DAA01B2FB79E009B3D7F /* Icon-Small-40@2x.png in Resources */,
 				83D1DA9F1B2FB79E009B3D7F /* Icon-Small-40.png in Resources */,
@@ -339,8 +407,12 @@
 				831B930D1B2AAD6B00C47894 /* LaunchScreen.xib in Resources */,
 				831B93361B2AD95C00C47894 /* fullscreen.png in Resources */,
 				83D1DA9D1B2FB79E009B3D7F /* Icon-60.png in Resources */,
+				83D1DAB21B2FFDC4009B3D7F /* Default.png in Resources */,
+				83D1DAAF1B2FFDC4009B3D7F /* Default-568h@2x.png in Resources */,
 				831B93321B2AC80A00C47894 /* basketball.png in Resources */,
 				831B93341B2AC9E200C47894 /* basket.png in Resources */,
+				83D1DAB11B2FFDC4009B3D7F /* Default-Portrait-736h@3x.png in Resources */,
+				83D1DAB01B2FFDC4009B3D7F /* Default-667h@2x.png in Resources */,
 				83D1DAA51B2FB79E009B3D7F /* icon@152.png in Resources */,
 				83D1DAA31B2FB79E009B3D7F /* Icon.png in Resources */,
 				831B930A1B2AAD6B00C47894 /* Images.xcassets in Resources */,
@@ -452,7 +524,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SONGRAN LIU";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SONGRAN LIU";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -471,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -495,7 +568,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SONGRAN LIU";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SONGRAN LIU";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -508,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -520,7 +594,13 @@
 			baseConfigurationReference = DE98B6669CA426B379AA9E0D /* Pods-EverydayNBA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SONGRAN LIU";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/KeisukeTatsumi/Desktop/Prog/iOS/GoogleMobileAdsSdkiOS-7.3.1",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EverydayNBA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,7 +612,13 @@
 			baseConfigurationReference = D5DCB32CD724F0C46965B8FB /* Pods-EverydayNBA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SONGRAN LIU";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/KeisukeTatsumi/Desktop/Prog/iOS/GoogleMobileAdsSdkiOS-7.3.1",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EverydayNBA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

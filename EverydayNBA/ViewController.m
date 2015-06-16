@@ -14,6 +14,8 @@
 #import "NBAVideoParser.h"
 #import <SVProgressHUD.h>
 #import "ENTableViewCell.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#define MY_BANNER_UNIT_ID @"ca-app-pub-1043692751731091/4753637162"
 
 static void *AUMediaPlaybackCurrentTimeObservationContext = &AUMediaPlaybackCurrentTimeObservationContext;
 static void *AUMediaPlaybackDurationObservationContext = &AUMediaPlaybackDurationObservationContext;
@@ -39,6 +41,8 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     
     UIView          *navigationView;
     UILabel         *title;
+    
+    GADBannerView *banner1;
 }
 
 @property (nonatomic) VideoView *playbackView;
@@ -81,7 +85,7 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     [self initControlView];
     
     
-    videoTable = [[UITableView alloc]initWithFrame:CGRectMake(0, self.playbackView.frame.origin.y + self.playbackView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.playbackView.frame.origin.y - self.playbackView.frame.size.height)];
+    videoTable = [[UITableView alloc]initWithFrame:CGRectMake(0, self.playbackView.frame.origin.y + self.playbackView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.playbackView.frame.origin.y - self.playbackView.frame.size.height - 50)];
     videoTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     videoTable.delegate = self;
     videoTable.dataSource = self;
@@ -90,6 +94,15 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     
     //test data
     videoList = [[NSMutableArray alloc]init];
+    
+    //広告
+    banner1 = [[GADBannerView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height-50, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    banner1.adUnitID = MY_BANNER_UNIT_ID;
+    banner1.rootViewController = self;
+    banner1.backgroundColor = [UIColor clearColor];
+    banner1.center = CGPointMake(self.view.bounds.size.width/2, banner1.center.y);
+    [self.view addSubview:banner1];
+    [banner1 loadRequest:[GADRequest request]];
 }
 
 - (void)viewDidLoad {
@@ -97,7 +110,7 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     // Do any additional setup after loading the view, typically from a nib.
     _webView = [[UIWebView alloc]initWithFrame:CGRectZero];
     _webView.delegate = self;
-    [self.view addSubview:_webView];
+//    [self.view addSubview:_webView];
     urlString = @"http://www.nba.co.jp/nba/video";
     request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [_webView loadRequest:request];
@@ -156,12 +169,11 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     
     
     if (![tempString isEqualToString:@""]) {
-        topItem.remotePath = tempString;
-        
-        [self initView];
-        
+        if (topItem.remotePath != tempString) {
+            topItem.remotePath = tempString;
+            [self initView];
+        }
     }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -211,14 +223,14 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
     [controlView addSubview:playButton];
     
     //seek
-    [seekBar setFrame:CGRectMake(5, controlView.frame.size.height - 25, controlView.frame.size.width - 40, 20)];
+    [seekBar setFrame:CGRectMake(10, controlView.frame.size.height - 28, controlView.frame.size.width - 50, 20)];
     seekBar.tintColor = [UIColor orangeColor];
     [seekBar addTarget:self action:@selector(didSlide) forControlEvents:UIControlEventValueChanged];
     [controlView addSubview:seekBar];
     
     //    [fullscrenButton removeFromSuperview];
     //fllscreen
-    [fullscrenButton setFrame:CGRectMake(controlView.frame.size.width - 26, controlView.frame.size.height - 26, 20, 20)];
+    [fullscrenButton setFrame:CGRectMake(controlView.frame.size.width - 31, controlView.frame.size.height - 31, 25, 25)];
     [fullscrenButton setImage:[UIImage imageNamed:@"fullscreen"] forState:UIControlStateNormal];
     [controlView addSubview:fullscrenButton];
     [fullscrenButton addTarget:self action:@selector(toggleFullscreen) forControlEvents:UIControlEventTouchUpInside];
@@ -238,6 +250,20 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
         [self.playbackView setFrame:[UIScreen mainScreen].bounds];
         [self setControlView];
     }
+}
+
+-(void) setFullscreen{
+    isFullScreen = YES;
+    [videoTable setHidden:YES];
+    [self.playbackView setFrame:[UIScreen mainScreen].bounds];
+    [self setControlView];
+}
+
+- (void)setPortraitView{
+    isFullScreen = NO;
+    [videoTable setHidden:NO];
+    [self.playbackView setFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width/16*9)];
+    [self setControlView];
 }
 
 #pragma tableview delegate
@@ -379,6 +405,45 @@ static void *AUMediaPlaybackTimeValidityObservationContext = &AUMediaPlaybackTim
         [playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
         [player play];
     }
+}
+
+#pragma rotation
+
+// 回転が完了した後に行っておく処理
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    if(fromInterfaceOrientation == UIInterfaceOrientationPortrait){
+//        [self toggleFullscreen];
+        NSLog(@"did  from Portrait");
+        [self setFullscreen];
+    }else if(fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ){
+        NSLog(@"did  from UpsideDown");
+        [self setFullscreen];
+    }else if(fromInterfaceOrientation == UIInterfaceOrientationLandscapeRight ){
+        NSLog(@"did  from LandscapeRight");
+//        [self toggleFullscreen];
+        [self setPortraitView];
+    }else if(fromInterfaceOrientation == UIInterfaceOrientationLandscapeLeft){
+        NSLog(@"did  from LandscapeLeft");
+        [self setPortraitView];
+    }else{
+        NSLog(@"did  何が起きた？！");
+    }
+}
+
+// 回転を開始する前に行っておく処理
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    NSLog(@"ローテイト");
+//    if(toInterfaceOrientation == UIInterfaceOrientationPortrait){
+//        NSLog(@"will to   Portrait");
+//    }else if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ){
+//        NSLog(@"will to   UpsideDown");
+//    }else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight ){
+//        [self toggleFullscreen];
+//    }else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft){
+//        [self toggleFullscreen];
+//    }else{
+//        NSLog(@"will 何が起きた？！");
+//    }
 }
 
 

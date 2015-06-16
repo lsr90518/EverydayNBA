@@ -1,5 +1,5 @@
 //
-//  mediaItem.h
+//  MediaItem.h
 //  EverydayNBA
 //
 //  Created by 劉 松然 on 2015/06/12.
